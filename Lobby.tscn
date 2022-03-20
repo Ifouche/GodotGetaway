@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Fonts/FashionVictim.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://WaitingRoom.tscn" type="PackedScene" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -113,3 +114,5 @@ margin_top = 77.0
 margin_right = 236.0
 margin_bottom = 150.0
 text = "Host Game"
+
+[node name="WaitingRoom" parent="." instance=ExtResource( 2 )]
