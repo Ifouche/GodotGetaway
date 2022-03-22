@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/FashionVictim.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://WaitingRoom.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Lobby/WaitingRoom.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Lobby/Lobby.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -14,6 +15,7 @@ default_font = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = SubResource( 2 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -116,3 +118,7 @@ margin_bottom = 150.0
 text = "Host Game"
 
 [node name="WaitingRoom" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[connection signal="pressed" from="VBoxContainer/CenterContainer2/VBoxContainer/JoinGameButton" to="." method="_on_JoinGameButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer2/VBoxContainer/HostGameButton" to="." method="_on_HostGameButton_pressed"]
