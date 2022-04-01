@@ -117,8 +117,7 @@ margin_right = 236.0
 margin_bottom = 150.0
 text = "Host Game"
 
-[node name="WaitingRoom" parent="." instance=ExtResource( 2 )]
-visible = false
+[node name="WaitingRoom" parent="." groups=["waitingRoom"] instance=ExtResource( 2 )]
 
 [connection signal="pressed" from="VBoxContainer/CenterContainer2/VBoxContainer/JoinGameButton" to="." method="_on_JoinGameButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer2/VBoxContainer/HostGameButton" to="." method="_on_HostGameButton_pressed"]

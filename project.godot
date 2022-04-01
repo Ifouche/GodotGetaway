@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Network="*res://Networking/Network.gd"
+Save="*res://SaveGame/Save.gd"
 
 [physics]
 
